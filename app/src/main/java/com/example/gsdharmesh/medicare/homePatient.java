@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -20,8 +21,35 @@ public class homePatient extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_patient);
         TextView send = (TextView) findViewById(R.id.tv_send);
+        TextView view_prof = (TextView) findViewById(R.id.view_prof);
+        ImageView messages = (ImageView) findViewById(R.id.thumbnail2);
+        ImageView profile = (ImageView) findViewById(R.id.thumbnail);
+
+
+        view_prof.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent INT=new Intent(homePatient.this,Profile.class);
+                startActivity(INT);
+            }
+        });
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent INT=new Intent(homePatient.this,Profile.class);
+                startActivity(INT);
+            }
+        });
+
 
         send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent INT=new Intent(homePatient.this,showChatList.class);
+                startActivity(INT);
+            }
+        });
+        messages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent INT=new Intent(homePatient.this,showChatList.class);

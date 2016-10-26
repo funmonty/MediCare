@@ -30,6 +30,8 @@
         <activity android:name=".Message" />
         <activity android:name=".showChatList" >
         </activity>
+        <activity android:name=".Profile" >
+        </activity>
     </application>
 
 </manifest>
